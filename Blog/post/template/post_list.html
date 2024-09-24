@@ -1,10 +1,14 @@
 {% extends 'base.html' %}
+
 {% block content %}
-<h2>All Posts</h2>
-<ul>
+<h2 class="my-4">All Posts</h2>
+<ul class="list-group">
     {% for post in posts %}
-        <li><a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a></li>
+        <li class="list-group-item">
+            <a href="{% url 'post_detail' post.pk %}">{{ post.title }}</a>
+            <span class="badge badge-secondary float-right">{{ post.published_date }}</span>
+        </li>
     {% endfor %}
 </ul>
-<a href="{% url 'create_post' %}">Create a new post</a>
+<a href="{% url 'create_post' %}" class="btn btn-primary my-3">Create a new post</a>
 {% endblock %}
