@@ -50,6 +50,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # otros middlewares
     'django.contrib.auth.middleware.AuthenticationMiddleware',
+    'post.middleware.RequestLogMiddleware',
 ]
 
 
