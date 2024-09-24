@@ -38,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles', 
     'post',
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
 ]
 
 MIDDLEWARE = [
@@ -50,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
     # otros middlewares
     'django.contrib.auth.middleware.AuthenticationMiddleware',
-    'post.middleware.RequestLogMiddleware',
+    'post.middleware.RequestLogMiddleware'
 ]
 
 
